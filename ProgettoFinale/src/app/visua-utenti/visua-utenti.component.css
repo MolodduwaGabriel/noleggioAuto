@@ -1,0 +1,14 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.box{
+  background: 	#6b5244f6;
+  border-radius: 10px;
+}
+.box h5 {
+    text-align: center;
+     color : white;
+}
+.box ul  {
+
+    color : white;
+}

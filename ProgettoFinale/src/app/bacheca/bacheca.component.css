@@ -1,0 +1,20 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.box{
+  background: 	#776d5f98;
+  border-radius: 10px;
+     margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+
+
+form
+{
+    padding: 10px;
+}
+.nuovoPostInput
+{
+    margin-bottom: 3px;
+}

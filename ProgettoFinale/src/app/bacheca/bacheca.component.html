@@ -1,0 +1,30 @@
+<button class="btn btn-info" *ngIf="loggedUser" (click)="triggerNewPostForm()">Pubblica nuovo post</button>
+<div class="form-group" *ngIf="postFormShow">
+    <br>
+  <form [formGroup]="postForm" (ngSubmit)="addAnnuncio()" >
+
+
+    <strong>Titolo:</strong> <input class="form-control nuovoPostInput" [formControl]="postForm.controls['titolo']">
+    <strong>Descrizione: </strong> <input class="form-control nuovoPostInput" [formControl]="postForm.controls['descrizione']">
+    <button class="btn btn-info" type="submit">Aggiungi</button>
+  </form>
+</div>
+<div *ngFor="let asd of ann" class="box">
+    <br>
+    <h2>{{asd.titolo}}</h2>
+  <p>Pubblicato da : </p> <strong>{{asd.username}}  </strong>
+   <p> il giorno: {{asd.data}}</p>
+
+  <p><strong>Descrizione:</strong><br>
+    {{asd.descrizione}}</p>
+  <h4>Commenti: </h4>
+  <ul>
+    <li *ngFor="let com of asd.risposte">
+    <strong> {{com.username}}</strong> <br>il: {{com.data}}<br>
+      {{com.testo}}</li>
+      <div *ngIf="loggedUser">
+        <input #cm>
+        <button class="btn btn-info  form-control nuovoPostInput" (click)="addComment(asd.risposte, cm)">Aggiungi commento</button>
+      </div>
+  </ul>
+</div>
