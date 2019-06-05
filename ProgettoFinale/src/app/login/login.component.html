@@ -12,6 +12,9 @@
     class="sbagliato" >Inserire Password
     </div>
 
-    <button type="submit">Login</button><br>
+    <button class="btn btn-success " type="submit" [disabled]="!formLog.valid">Registrati</button><br>
+    <div *ngIf="!formLog.valid"
+    class="sbagliato" >Credenziali sbagliate
+    </div>
   </form>
 </div>
