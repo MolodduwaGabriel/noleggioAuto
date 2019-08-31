@@ -10,13 +10,21 @@ import { RegistrazioneComponent } from './registrazione/registrazione.component'
 import { VisuaUtentiComponent } from './visua-utenti/visua-utenti.component';
 import { BachecaComponent } from './bacheca/bacheca.component';
 import { LoginComponent } from './login/login.component';
+import { NewObjectComponent } from './new-object/new-object.component';
+import { NewPostComponent } from './new-post/new-post.component';
+import { ObjectListComponent } from './object-list/object-list.component';
+import { UserObjectComponent } from './user-object/user-object.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegistrazioneComponent,
     VisuaUtentiComponent,
     BachecaComponent,
-    LoginComponent
+    LoginComponent,
+    NewObjectComponent,
+    NewPostComponent,
+    ObjectListComponent,
+    UserObjectComponent
   ],
   imports: [
     BrowserModule,
